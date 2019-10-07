@@ -13,6 +13,9 @@ pipeline {
             }
         }
         stage('Build') {
+            environment{ 
+                PATH = "/usr/local/bin:$PATH"
+            } 
             steps {
                 script {
                     def image = docker.build("${DOCKER_REGISTRY}/${DOCKER_IMAGE_NAME}:${env.BUILD_ID}")
