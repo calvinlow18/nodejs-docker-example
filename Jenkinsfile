@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Build') {
             environment{ 
-                PATH = "/usr/local/bin:$PATH"
+                PATH = "/usr/local/bin:/var/run/docker.sock:$PATH"
             } 
             steps {
                 script {
