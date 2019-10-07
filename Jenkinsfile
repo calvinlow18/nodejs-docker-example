@@ -1,10 +1,10 @@
 pipeline {
     agent any
     environment {
-        DOCKER_CONTAINER_NAME=mcox-api
-        DOCKER_IMAGE_NAME=mcox-api
-        DOCKER_REGISTRY=registry.docker.io
-        ENV_FILE_LOCATION=/home/calvin.low/mcox/mcox-api.env
+        DOCKER_CONTAINER_NAME="mcox-api"
+        DOCKER_IMAGE_NAME="mcox-api"
+        DOCKER_REGISTRY="registry.docker.io"
+        ENV_FILE_LOCATION="/home/calvin.low/mcox/mcox-api.env"
     }
     stages {
         stage('Checkout'){
